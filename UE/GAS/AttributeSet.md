@@ -1,3 +1,22 @@
+```c++
+#define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
+
+/*
+ATTRIBUTE_ACCESSORS(ClassName, PropertyName) 本质是：
+	为 Attribute 自动生成4个辅助函数
+	PROPERTY_GETTER：返回 FGameplayAttribute
+	VALUE_GETTER：获取当前值
+	VALUE_SETTER：设置值
+	VALUE_INITTER：初始化值
+*/
+```
+
+
+
 **属性写法模板**
 
 ```c++
