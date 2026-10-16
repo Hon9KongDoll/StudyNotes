@@ -19,13 +19,13 @@ DOREPLIFETIME_CONDITION_NOTIFY(ClassName,			// 所属类
                                RepNotifyCondition)	// 控制什么时候调用 OnRep_Xxx
 /*
  Condition：
-	COND_None：默认复制给所有相关客户端
-	COND_OwnerOnly：只复制给拥有者
-  	COND_SkipOwner：除拥有者外都复制
-  	COND_InitialOnly：只在初始同步时发送
+	COND_None：          默认复制给所有相关客户端
+	COND_OwnerOnly：     只复制给拥有者
+  	COND_SkipOwner：     除拥有者外都复制
+  	COND_InitialOnly：   只在初始同步时发送
  RepNotifyCondition：
- 	REPNOTIFY_Always：属性值相同时也调用
-	REPNOTIFY_OnChanged:只有属性值变化时调用
+ 	REPNOTIFY_Always：   属性值相同时也调用
+	REPNOTIFY_OnChanged：只有属性值变化时调用
 */
 ```
 
