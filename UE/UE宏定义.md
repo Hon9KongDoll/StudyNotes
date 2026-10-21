@@ -1,13 +1,20 @@
 **UPROPERTY**
 
-```
+```c++
 UPROPERTY(Replicated)
-    变量只要在Server上修改，就会同步到客户端
+    // 变量只要在Server上修改，就会同步到客户端
 UPROPERTY(ReplicatedUsing=OnRep_Xxx)
-    变量同步到客户端时，会自动调用指定函数
+    // 变量同步到客户端时，会自动调用指定函数
 ```
 
 ​	
+
+```c++
+Meta = (ExpandBoolAsExecs = "ReturnValue")
+	// 将 C++ 函数的 bool 返回值，转换成蓝图节点上的两个执行引脚：True 和 False。
+```
+
+
 
 **GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const {}**
 

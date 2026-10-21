@@ -11,3 +11,11 @@
 | `TargetRequiredTags`     | 只有当目标 `Actor` **/** `Component` 拥有所有这些标签时，才能激活此技能 |
 | `TargetBlockedTags`      | 如果目标 `Actor` **/** `Component` 具有这些标签中的任意一个，禁止激活此技能 |
 
+
+
+**ReplicateInputDirectly**
+
+```c++
+// 如果为 true，则此技能始终会将输入按下和释放事件同步到服务器
+```
+
