@@ -16,7 +16,7 @@ Meta = (ExpandBoolAsExecs = "ReturnValue")
 
 
 
-**GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const {}**
+**void GetLifetimeReplicatedProps( TArray< class FLifetimeProperty > & OutLifetimeProps ) const**
 
 ```c++
 // DOREPLIFETIME 增强版：支持复制条件、RepNotify行为控制
