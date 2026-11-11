@@ -21,6 +21,16 @@ UCLASS(Blueprintable)
 
 
 
+**UENUM**
+
+```C++
+UENUM(BlueprintType)
+	// UE 的 Blueprint 暴露机制目前只支持 uint8 类型的枚举,只需要在枚举名称后面添加 : uint8
+    // enum class EEffectApplicationPolicy : uint8 {}
+```
+
+
+
 **void GetLifetimeReplicatedProps( TArray< class FLifetimeProperty > & OutLifetimeProps ) const**
 
 ```c++
