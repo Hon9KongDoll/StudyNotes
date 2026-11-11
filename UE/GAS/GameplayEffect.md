@@ -34,7 +34,7 @@
 		// GE 刚刚应用时，是否立即执行一次周期效果
 ```
 
-![](UE/GameplayEffect.assets/ExecutePeriodicEffectOnApplication.png)
+![](../Image/ExecutePeriodicEffectOnApplication.png)
 
 
 
@@ -72,5 +72,29 @@
 	// 7 秒：再次执行
 	// 9 秒：再次执行
 	// 解除抑制后立即执行一次周期效果，重置 Period 计时器，等待完整的 Period 后再执行下一次
+```
+
+
+
+**Stacking Type**
+
+```c++
+// None : 不进行堆叠，每次施加都是独立效果
+	// 玩家A给敌人施加一次中毒
+	// 玩家A再次给敌人施加一次中毒
+	// 两次中毒是两个独立 GameplayEffect, 各自计算持续时间
+
+// AggregateBySource : 按施加来源进行堆叠
+	// 玩家A给敌人施加一次中毒，形成一个堆叠
+	// 玩家A再次给敌人施加一次中毒，增加同一个堆叠的层数
+	// 玩家B给敌人施加一次中毒，形成另一个独立堆叠
+	// 同一个 Source 的效果合并，不同 Source 的效果分开
+
+// AggregateByTarget : 按目标进行堆叠，不区分施加来源
+	// 玩家A给敌人施加一次中毒，层数为1
+	// 玩家A给敌人施加一次中毒，层数为2
+	// 玩家B给敌人施加一次中毒，层数为3
+	// 玩家C给敌人施加一次中毒，层数为4
+	// 只要目标相同，相同 GE 就会合并堆叠，不区分来源
 ```
 
