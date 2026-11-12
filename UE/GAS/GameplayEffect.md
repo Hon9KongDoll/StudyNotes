@@ -1,7 +1,19 @@
-**Duration**
+### 1 Duration
+
+#### 1.1 DurationPolicy
+
+`Instant` 瞬时 :
+
+- 对 `Attirubte` 中的 `BaseValue` 立即进行永久性修改
+
+
+- 无法进入 `ASC` 中的 `ActiveGameplayEffectsContainer` 属性
+
+
+- 触发 `GameplayCue` 事件 : Execute
+
 
 ```c++
-Duration Policy
 // Instant : 瞬间效果
 //	GE 应用时立即执行，无法进入 ASC 的 ActiveGameplayEffectsContainer
 //	直接修改 Attribute 的 BaseValue
